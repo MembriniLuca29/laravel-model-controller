@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Guest\PageController;
+
 /*
-|--------------------------------------------------------------------------
+|------------------------------------------------------------------------
 | Web Routes
-|--------------------------------------------------------------------------
+|------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
@@ -13,24 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $students = [
-        'Marco',
-        'Gino',
-        'Claudia',
-    ];
+Route::get('/', [PageController::class, 'index'])->name('movie.index');
 
-    $data = compact('students');
-
-    // dd($data);
-
-    return view('home', $data);
-
-    // return view('home', [
-    //     'students' => $students
-    // ]);
-});
-
-Route::get('/contatti', function () {
-    return view('contact');
-});
+Route::get('/{id}', [PageController::class, 'show'])->name('movie.show');
