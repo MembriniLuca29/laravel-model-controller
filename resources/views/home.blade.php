@@ -12,7 +12,7 @@ Homepage
     <div class="row mb-5">
         <div class="col">
             <h1>
-                Comics
+                Movie
             </h1>
         </div>
     </div>
