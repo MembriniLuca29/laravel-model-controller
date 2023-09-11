@@ -2,9 +2,7 @@
 
 @section('page-title', 'Homepage')
 
-{{-- @section('page-title')
-Homepage
-@endsection --}}
+
 
 @section('main-content')
 
@@ -39,9 +37,9 @@ Homepage
                            Rate:  {{ $movie['vote'] }}
                         </h3>
 
-                        {{-- <a href="{{ route('movies-show', ['index' => $index]) }}" class="btn btn-primary">
-                            Check single comic
-                        </a> --}}
+                         <a href="{{ route('movie.show', ['id' => $movie->id]) }}" class="btn btn-primary">
+                            Check single Movie
+                        </a> 
                     </div>
                 </div>
             </div>
